@@ -25,5 +25,33 @@ public class Controller {
         view.printMessage(View.YOUR_WAY + model.getYourWay());
     }
 
+    private int inputIntValueWithScanner(Scanner sc) {
+        int res = 0;
+        view.printMessage(getInputIntMessage());
+
+        while (true) {
+            while (!sc.hasNextInt()) {
+                view.printMessage(View.WRONG_INPUT_INT_DATA + getInputIntMessage());
+                sc.next();
+            }
+            if ((res = sc.nextInt()) <= model.getMinBarrier() ||
+            res >= model.getMaxBarrier()) {
+                view.printMessage(View.WRONG_INPUT_INT_DATA + getInputIntMessage());
+                continue;
+            }
+            break;
+        }
+        return res;
+    }
+
+    private String getInputIntMessage() {
+        return view.concatenationString(
+                View.INPUT_INT_DATA, View.OPENS_SQUARE_BRACKET,
+                String.valueOf(model.getMinBarrier()), View.SPACE_SING,
+                String.valueOf(model.getMaxBarrier()),
+                View.CLOSING_SQUARE_BRACKET, View.SPACE_SING,
+                View.EQUAL_SING, View.SPACE_SING );
+    }
+
 
 }
