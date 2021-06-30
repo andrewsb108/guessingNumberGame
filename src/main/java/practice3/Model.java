@@ -28,9 +28,10 @@ public class Model {
         return true;
     }
 
-    public void setPrimaryBarrier(int minBarrier, int maxBarrier) {
+    public String setPrimaryBarrier(int minBarrier, int maxBarrier) {
         this.minBarrier = minBarrier;
         this.maxBarrier = maxBarrier;
+        return minBarrier + " to " + maxBarrier;
     }
 
     public int getMaxBarrier() {
