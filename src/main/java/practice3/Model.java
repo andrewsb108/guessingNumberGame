@@ -10,9 +10,10 @@ public class Model {
 
     private List<Integer> yourWay = new ArrayList<>();
 
-    public void setSecretValue() {
+    public int setSecretValue() {
         secretValue = (int) Math.ceil(Math.random() *
                 (maxBarrier - minBarrier - 1) + minBarrier);
+        return secretValue;
     }
 
     public boolean checkValue(int value) {
