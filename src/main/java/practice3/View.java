@@ -1,2 +1,4 @@
-package practice3;public class View {
+package practice3;
+
+public class View {
 }

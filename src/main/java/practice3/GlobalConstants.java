@@ -1,2 +1,4 @@
-package practice3;public interface GlobalConstants {
+package practice3;
+
+public interface GlobalConstants {
 }

@@ -1,2 +1,4 @@
-package practice3;public class Model {
+package practice3;
+
+public class Model {
 }

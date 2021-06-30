@@ -1,2 +1,4 @@
-package practice3;public class Controller {
+package practice3;
+
+public class Controller {
 }
