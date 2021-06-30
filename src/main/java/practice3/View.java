@@ -6,6 +6,7 @@ public class View {
     public static final String OPENS_SQUARE_BRACKET = "[";
     public static final String CLOSING_SQUARE_BRACKET = "]";
 
+    public static final String TO = "to ";
     public static final String INPUT_INT_DATA = "Input INT value ";
     public static final String WRONG_INPUT_INT_DATA = "Wrong input! Repeat please! ";
     public static final String CONGRATULATION = "CONGRATULATION! You WIN! Secret value = ";

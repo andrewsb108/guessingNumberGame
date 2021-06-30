@@ -19,14 +19,14 @@ public class Controller {
 
         model.setSecretValue();
 
-        while (model.checkValue(inputIntValueWithScanner(sc)));
+        while (model.checkValue(inputIntValueWithScanner(sc))) ;
 
         view.printMessage(View.CONGRATULATION + model.getSecretValue());
         view.printMessage(View.YOUR_WAY + model.getYourWay());
     }
 
     private int inputIntValueWithScanner(Scanner sc) {
-        int res = 0;
+        int res;
         view.printMessage(getInputIntMessage());
 
         while (true) {
@@ -35,7 +35,7 @@ public class Controller {
                 sc.next();
             }
             if ((res = sc.nextInt()) <= model.getMinBarrier() ||
-            res >= model.getMaxBarrier()) {
+                    res >= model.getMaxBarrier()) {
                 view.printMessage(View.WRONG_INPUT_INT_DATA + getInputIntMessage());
                 continue;
             }
@@ -47,11 +47,9 @@ public class Controller {
     private String getInputIntMessage() {
         return view.concatenationString(
                 View.INPUT_INT_DATA, View.OPENS_SQUARE_BRACKET,
-                String.valueOf(model.getMinBarrier()), View.SPACE_SING,
+                String.valueOf(model.getMinBarrier()), View.SPACE_SING, View.TO,
                 String.valueOf(model.getMaxBarrier()),
                 View.CLOSING_SQUARE_BRACKET, View.SPACE_SING,
-                View.EQUAL_SING, View.SPACE_SING );
+                View.EQUAL_SING, View.SPACE_SING);
     }
-
-
 }
