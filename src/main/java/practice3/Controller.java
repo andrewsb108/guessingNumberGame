@@ -9,5 +9,7 @@ public class Controller {
         this.view = view;
     }
 
+    public void processUser() {
 
+    }
 }
