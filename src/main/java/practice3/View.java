@@ -3,8 +3,8 @@ package practice3;
 public class View {
     public static final String EQUAL_SING = "=";
     public static final String SPACE_SING = " ";
-    public static final String OPENS_SQUARE_BRACKET = "[";
-    public static final String CLOSING_SQUARE_BRACKET = "]";
+    public static final String OPENS_SQUARE_BRACKET = "]";
+    public static final String CLOSING_SQUARE_BRACKET = "[";
 
     public static final String TO = "to ";
     public static final String INPUT_INT_DATA = "Input INT value ";
