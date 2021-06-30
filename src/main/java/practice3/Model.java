@@ -8,12 +8,16 @@ public class Model {
     private int minBarrier;
     private int secretValue;
 
+   private final int PRIMARY_MIN_BARRIER = 0;
+   private final int PRIMARY_MAX_BARRIER = 100;
+
     private List<Integer> yourWay = new ArrayList<>();
 
-    public int setSecretValue() {
+    public void setSecretValue() {
         secretValue = (int) Math.ceil(Math.random() *
                 (maxBarrier - minBarrier - 1) + minBarrier);
-        return secretValue;
+        minBarrier = PRIMARY_MIN_BARRIER;
+        maxBarrier = PRIMARY_MAX_BARRIER;
     }
 
     public boolean checkValue(int value) {
@@ -44,6 +48,14 @@ public class Model {
 
     public int getSecretValue() {
         return secretValue;
+    }
+
+    public int getPRIMARY_MIN_BARRIER() {
+        return PRIMARY_MIN_BARRIER;
+    }
+
+    public int getPRIMARY_MAX_BARRIER() {
+        return PRIMARY_MAX_BARRIER;
     }
 
     public List<Integer> getYourWay() {

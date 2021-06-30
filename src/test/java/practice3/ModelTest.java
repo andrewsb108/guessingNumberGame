@@ -1,12 +1,10 @@
 package practice3;
 
+import org.junit.Assert;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 import static org.junit.Assert.*;
 
@@ -16,6 +14,12 @@ public class ModelTest {
     @Before
     public void setUp() throws Exception {
         model = new Model();
+    }
+    @Test
+    public void shouldRandomizeNumber_setSecretValueTest() {
+        model.setSecretValue();
+        Assert.assertEquals(0, model.getMinBarrier());
+        Assert.assertEquals(100, model.getMaxBarrier());
     }
 
     @Test

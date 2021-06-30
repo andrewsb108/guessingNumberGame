@@ -14,8 +14,8 @@ public class Controller {
     public void processUser() {
         Scanner sc = new Scanner(System.in);
 
-        model.setPrimaryBarrier(GlobalConstants.PRIMARY_MIN_BARRIER,
-                GlobalConstants.PRIMARY_MAX_BARRIER);
+        model.setPrimaryBarrier(model.getPRIMARY_MIN_BARRIER(),
+                model.getPRIMARY_MAX_BARRIER());
 
         model.setSecretValue();
 
