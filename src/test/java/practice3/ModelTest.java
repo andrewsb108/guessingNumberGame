@@ -21,7 +21,7 @@ public class ModelTest {
     }
 
     @Test
-    public void randomizeNumber_whenChangeInputNumber_setSecretValueTest() throws IllegalAccessException {
+    public void shouldRandomizeNumber_whenChangeInputNumber() throws IllegalAccessException {
         int oldNumber = -1;
         secretNumber.set(model, -1);
         model.setSecretValue();
@@ -31,7 +31,7 @@ public class ModelTest {
     }
 
     @Test
-    public void randomizeNumber_whenInRange_setSecretValueTest() {
+    public void shouldRandomizeNumber_whenInRange() {
         model.setSecretValue();
 
         assertEquals(0, model.getMinBarrier());
@@ -39,7 +39,7 @@ public class ModelTest {
     }
 
     @Test
-    public void checkNumber_whenEqualNumber_setSecretValueTest() throws IllegalAccessException {
+    public void shouldCheckNumber_whenNumberIsEqualAndReturnFalse() throws IllegalAccessException {
         model.setSecretValue();
         int orderedValue = 90;
         secretNumber.set(model, orderedValue);
@@ -49,7 +49,7 @@ public class ModelTest {
     }
 
     @Test
-    public void checkNumber_whenSmallerNumber_setSecretValueTest() throws IllegalAccessException {
+    public void shouldCheckNumber_whenUseSmallerNumberAndReturnTrue() throws IllegalAccessException {
         model.setSecretValue();
         int orderedValue = 30;
         secretNumber.set(model, orderedValue);
@@ -59,7 +59,7 @@ public class ModelTest {
     }
 
     @Test
-    public void checkNumber_whenGreaterNumber_checkValueTest() throws IllegalAccessException {
+    public void shouldCheckNumber_whenUseGreaterNumberAndReturnTrue() throws IllegalAccessException {
         model.setSecretValue();
         int orderedValue = 30;
         secretNumber.set(model, orderedValue);
@@ -69,7 +69,7 @@ public class ModelTest {
     }
 
     @Test
-    public void checkIfNumbersInRangeUsingLoop_setSecretValueTest() {
+    public void shouldCheckIfNumbersInRangeUsingLoopAndReturnTrue() {
         for (int i = 0; i < 10000; i++) {
             model.setSecretValue();
             int guessedNumber = model.getSecretValue();
@@ -79,14 +79,14 @@ public class ModelTest {
     }
 
     @Test
-    public void setNumberInList_checkValueTest() {
+    public void shouldCheckValueAndReturnTrue() {
         boolean value = model.checkValue(10);
 
         assertTrue(value);
     }
 
     @Test
-    public void setMinAndMaxBorders_setPrimaryBarrierTest() {
+    public void shouldSetMinAndMaxBorders() {
         String expectedBound = "10 to 20";
         assertEquals(expectedBound, model.setPrimaryBarrier(10, 20));
 
