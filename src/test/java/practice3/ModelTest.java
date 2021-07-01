@@ -59,7 +59,7 @@ public class ModelTest {
     }
 
     @Test
-    public void checkNumber_whenGreaterNumber_setSecretValueTest() throws IllegalAccessException {
+    public void checkNumber_whenGreaterNumber_checkValueTest() throws IllegalAccessException {
         model.setSecretValue();
         int orderedValue = 30;
         secretNumber.set(model, orderedValue);
@@ -69,7 +69,7 @@ public class ModelTest {
     }
 
     @Test
-    public void guessedNumbersShouldBeInRange() {
+    public void checkIfNumbersInRangeUsingLoop_setSecretValueTest() {
         for (int i = 0; i < 10000; i++) {
             model.setSecretValue();
             int guessedNumber = model.getSecretValue();
