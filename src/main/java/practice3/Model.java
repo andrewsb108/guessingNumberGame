@@ -8,8 +8,8 @@ public class Model {
     private int minBarrier;
     private int secretValue;
 
-   private final int PRIMARY_MIN_BARRIER = 0;
-   private final int PRIMARY_MAX_BARRIER = 100;
+    private final int PRIMARY_MIN_BARRIER = 0;
+    private final int PRIMARY_MAX_BARRIER = 100;
 
     private List<Integer> yourWay = new ArrayList<>();
 
@@ -22,9 +22,9 @@ public class Model {
 
     public boolean checkValue(int value) {
         yourWay.add(value);
-        if (value == secretValue) {
+        if (secretValue == value) {
             return false;
-        } else if (value > secretValue) {
+        } else if (secretValue < value) {
             maxBarrier = value;
         } else {
             minBarrier = value;
